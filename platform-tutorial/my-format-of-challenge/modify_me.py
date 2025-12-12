@@ -1,2 +1,2 @@
-def hello_world():
-    return "H3110 W0r1d"
+def count_instances(data, target):
+    return 0
