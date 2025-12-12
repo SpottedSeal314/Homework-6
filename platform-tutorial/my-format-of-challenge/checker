@@ -8,9 +8,25 @@ import modify_me
 
 
 class TestHelloWorld(unittest.TestCase):
-    def test_hello_world(self):
-        result = modify_me.hello_world()
-        self.assertEqual(result, "Hello World")
+    def test_single_occurrence(self):
+        result = modify_me.count_instances([1, 2, 3, 4], 3)
+        self.assertEqual(result, 1)
+
+    def test_multiple_occurrences(self):
+        result = modify_me.count_instances([5, 5, 5, 2], 5)
+        self.assertEqual(result, 3)
+
+    def test_no_occurrences(self):
+        result = modify_me.count_instances(["a", "b", "c"], "z")
+        self.assertEqual(result, 0)
+
+    def test_empty_list(self):
+        result = modify_me.count_instances([], 10)
+        self.assertEqual(result, 0)
+
+    def test_mixed_types(self):
+        result = modify_me.count_instances([1, "1", 1, "1"], "1")
+        self.assertEqual(result, 2)
 
 
 # Taken from https://stackoverflow.com/questions/13550039/how-to-use-python-unit-tests-in-self-contained-program
