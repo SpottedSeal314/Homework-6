@@ -4,4 +4,3 @@
 **Task**: Your goal is to change the _count_instances_ method to count the number of instances _target_ appears within _data_. Your goal is to finish this as safely and efficiently as possible.
 
 
-_Post Note_: This is an assignment made for INF 113 and our group is not totally experienced with cyber security, just coding in Python. This is our best approximation of what we believe a good challenge to be.
